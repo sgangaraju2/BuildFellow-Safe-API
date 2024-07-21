@@ -10,15 +10,16 @@ body {
   background-color: white !important;
   padding: 2em;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
   border-radius: 1em;
   width: 35em !important;
-  height: 15em;
 }
+
 .form-inputs {
   display: flex;
   flex-direction: column;
 }
+
 h2 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,6 +27,37 @@ h2 {
 
 .form-group {
   padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 120px; /* Adjust as needed for proper alignment */
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  height: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  flex-grow: 1;
+}
+
+input:focus {
+  outline: rgb(12, 12, 12) !important;
+}
+
+input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: rgb(168, 166, 166);
 }
 
 .btn {
@@ -43,51 +75,26 @@ h2 {
   background-color: rgb(72, 70, 70);
 }
 
-label {
-  padding-right: 1em;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
-label[for="email"] {
-  padding-right: 3em;
-}
-input {
-  width: 25em;
-  height: 1.5em;
-
-  font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 2px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-input:focus {
-  outline: rgb(12, 12, 12) !important;
-}
-
-input::placeholder {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  color: rgb(168, 166, 166);
-}
-
-.register {
+.register,
+.login {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   margin: 10px;
 }
 
-.register a {
+.register a,
+.login a {
   color: rgb(106, 159, 202);
   text-decoration: none;
 }
-.register a:hover {
+
+.register a:hover,
+.login a:hover {
   text-decoration: underline;
 }
 
-.register a:visited {
+.register a:visited,
+.login a:visited {
   color: rgb(106, 159, 202) !important;
 }
 
