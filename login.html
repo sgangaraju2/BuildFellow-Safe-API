@@ -58,5 +58,36 @@
       </div>
     </div>
 
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        let isValid = true;
+
+        // Email validation
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+          document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+          isValid = false;
+        } else {
+          document.getElementById('emailError').textContent = '';
+        }
+
+        // Password validation
+        if (password.length < 6) {
+          document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+          isValid = false;
+        } else {
+          document.getElementById('passwordError').textContent = '';
+        }
+
+        if (isValid) {
+          alert('Form submitted successfully!');
+        }
+      });
+    </script>
+
   </body>
 </html>
